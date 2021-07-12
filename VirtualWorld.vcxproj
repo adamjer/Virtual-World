@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{24F10EF0-1526-4987-AE39-42812A1A86DB}</ProjectGuid>
+    <RootNamespace>VirtualWorld</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2_ttf-2.0.12\include;C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2_image-2.0.0\include;C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2_ttf-2.0.12\lib\x86;C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2_image-2.0.0\lib\x86;C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2-2.0.3\include;C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2_image-2.0.0\include;C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2_ttf-2.0.12\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2_image-2.0.0\lib\x86;C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2_ttf-2.0.12\lib\x86;C:\Users\Adam\Documents\Visual Studio 2013\OtherLibraries\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Animal.h" />
+    <ClInclude Include="Antelope.h" />
+    <ClInclude Include="Fox.h" />
+    <ClInclude Include="GameMenu.h" />
+    <ClInclude Include="Grass.h" />
+    <ClInclude Include="Guarane.h" />
+    <ClInclude Include="Headers.h" />
+    <ClInclude Include="Human.h" />
+    <ClInclude Include="myExceptions.h" />
+    <ClInclude Include="Organism.h" />
+    <ClInclude Include="Plant.h" />
+    <ClInclude Include="Sheep.h" />
+    <ClInclude Include="SowThistle.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Turtle.h" />
+    <ClInclude Include="Wolf.h" />
+    <ClInclude Include="WolfBerries.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Animal.cpp" />
+    <ClCompile Include="Antelope.cpp" />
+    <ClCompile Include="Fox.cpp" />
+    <ClCompile Include="GameMenu.cpp" />
+    <ClCompile Include="Grass.cpp" />
+    <ClCompile Include="Guarane.cpp" />
+    <ClCompile Include="Human.cpp" />
+    <ClCompile Include="Organism.cpp" />
+    <ClCompile Include="Plant.cpp" />
+    <ClCompile Include="Sheep.cpp" />
+    <ClCompile Include="sdl_window_main.cpp" />
+    <ClCompile Include="SowThistle.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Turtle.cpp" />
+    <ClCompile Include="Wolf.cpp" />
+    <ClCompile Include="WolfBerries.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
